@@ -1,0 +1,180 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Virtual Dystopia</title>
+  <style>
+    @font-face {
+      font-family: 'Monoton';
+      src: url('Monoton-Regular.ttf') format('truetype'); /* Caminho do arquivo .ttf */
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #121212; 
+      color: #9b4dca;
+      font-weight: 1000;
+      font-size: 1.5rem;
+      text-align: center;
+      background-image: url('Virtual_imagem.jpg'); /* Nome do arquivo da imagem */
+background-size: cover; /* Faz a imagem cobrir toda a tela */
+background-position: center; /* Centraliza a imagem */
+background-attachment: fixed; /* Mantém a imagem fixa ao rolar a página */
+    }
+    header {
+      background-color: transparent;
+      padding: 30px;
+    }
+    header h1 {
+      margin: 0;
+      font-weight: 500;
+      font-family: 'Monoton', Arial, sans-serif;
+      font-size: 3.5rem;
+      letter-spacing: 2px; /* Espaçamento entre as letras */
+      text-shadow: 
+        0 0 1px rgba(255, 255, 255, 0.5), 
+        0 0 0px rgba(255, 255, 255, 0.3); /* Criando uma borda suave ao redor das letras */
+    }
+    nav {
+      margin: 20px 0;
+    }
+    nav a {
+      color: #76c7c0;
+      font-weight: 900;
+      text-decoration: none;
+      margin: 0 15px;
+      font-size: 1.5rem;
+    }
+    nav a:hover {
+      text-decoration: underline;
+    }
+    .content {
+      padding: 20px;
+    }
+    .discography {
+      display: none;
+    }
+    .discography ul {
+      list-style: none;
+      padding: 0;
+    }
+    .discography li {
+      margin: 10px 0;
+      font-size: 1.2rem;
+    }
+    .album {
+      margin: 20px 0;
+      text-align: left;
+      max-width: 600px;
+      margin: 20px auto;
+    }
+    .album h3 {
+      font-size: 1.6rem;
+      color: #76c7c0;
+      cursor: pointer;
+    }
+    .album ul {
+      list-style: none;
+      padding: 0;
+    }
+    .album ul li {
+      margin: 5px 0;
+    }
+    .album ul li a {
+      color: #000000;
+      font-weight: 1000;
+      text-decoration: none;
+    }
+    .album ul li a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Virtual Dystopia</h1>
+  </header>
+  <nav>
+    <a href="#" id="home-link">Home</a>
+    <a href="#" id="discography-link">Discography</a>
+  </nav>
+  <div class="content" id="home-content">
+    <p>Welcome to Virtual Dystopia! Explore the dystopian universe through our music</p>
+  </div>
+  <div class="content discography" id="discography-content">
+    <h2>Discography</h2>
+    <div class="album">
+      <h3 onclick="toggleSongs('songs-album1')">1. Chronicles of the Cybernetic City</h3>
+      <ul id="songs-album1" style="display: none;">
+        <li><a href="https://open.spotify.com/intl-pt/track/5nlbQ72X6f075Eowd5H2rF?si=NOOmTIUOSp2WjEAbfokrxQ&context=spotify%3Aalbum%3A2FfQIQHKhBhPNL2m6QCFLf&nd=1&utm_medium=organic&product=open&%24full_url=https%3A%2F%2Fopen.spotify.com%2Ftrack%2F5nlbQ72X6f075Eowd5H2rF%3Fsi%3DNOOmTIUOSp2WjEAbfokrxQ%26context%3Dspotify%253Aalbum%253A2FfQIQHKhBhPNL2m6QCFLf&feature=organic&_branch_match_id=1386897964611902279&_branch_referrer=H4sIAAAAAAAAA82Ob0vDMBDGP036stXUdiAUqXNhw7EadOi7kbTJEpt%2FXFM23%2FjZzYZ%2BB%2BHgOe7u99yjYgzTfVFMwUctv3IWQm60G4uHAH6Y%2B9j4IFyG8J2cjTnMYBp1QVDZIkxSXdb5H917m0YRWD8mrZzhdIE%2FanmzqFb%2BNFRrDASVZNKofNp1nX3b7LvXgN8%2FVy2XfoQzRbjuvYviHNPJry3CVdkyw2d77TCRdEPXz%2BpRvey22NZ0SbbyGpEZw9PvfxwzgW5IzG0mBYsziMbDkTndZ98gpADQ7njg4E%2BTgGapwFvxA2NNLnijAQAA" target="_blank">Virtual Horizon</a></li>
+        <li><a href="https://open.spotify.com/intl-pt/track/7h3vGpA3Ce4XPJztXfBLZP?si=AOYGg8p2RGKFo_Ibbisn0Q&nd=1&utm_medium=organic&product=open&%24full_url=https%3A%2F%2Fopen.spotify.com%2Ftrack%2F7h3vGpA3Ce4XPJztXfBLZP%3Fsi%3DAOYGg8p2RGKFo_Ibbisn0Q&feature=organic&_branch_match_id=1386897964611902279&_branch_referrer=H4sIAAAAAAAAA7WNSwrCMBiET5MuW22KilCkVlp8gI%2BVuilpm7TBmIQ%2FiaILz24UPIIwMDAfM9Nbq800ioxWlrNHSLQOBZeXaKZBta6xqdJUBihOmBOiciDS%2FlNBOENx4fXB4a%2FdqKuPLJDm4n3c41upM5zT5LhbPe2RzTfnHcKF4Qgvsu2p7CY6PpTrQlXLuuZGDvbfJyJE7Sf%2B%2F4bikWw9HQaMEuuApgo6InkTvIAyCsBlV9Wg7oZCmvegrvQNB%2FnWITEBAAA%3D" target="_blank">Neon Dreamscape</a></li>
+        <li><a href="https://open.spotify.com/intl-pt/track/0SrloOLIF2DQFib2077AT4?si=7aLko8UrRwebjlUjPCvcLA&nd=1&utm_medium=organic&product=open&%24full_url=https%3A%2F%2Fopen.spotify.com%2Ftrack%2F0SrloOLIF2DQFib2077AT4%3Fsi%3D7aLko8UrRwebjlUjPCvcLA&feature=organic&_branch_match_id=1386897964611902279&_branch_referrer=H4sIAAAAAAAAA7WN3wqCMBjFn2Zeas3ICCREEQKhv17HnFOna9%2F4nEU3PXsz6BGCAwfOj3NOZ60Zt0EwGrCyefnMGF9JPQQ7g1BP3MZghPYIXTWTUrcJVdzNFRImhOZOM%2FZ%2FbQ53F1lkfHC%2BuKCCQ7HPaXbKZUUXUZRcVyTMR0nCLGLFAJsSz09R9arsj%2BmDF8n3iSlVuYn%2FvxG61rWjS68RzE4oYsCWacm9N4pGIErd3iqE5ygwTjuEu%2FgAVkrPkzEBAAA%3D" target="_blank">Silicon Hearts</a></li>
+        <li><a href="https://open.spotify.com/intl-pt/track/36VUprPnKa6JZU7IMLgu7s?si=rjFwWyvTQa-pvd4p8XZZOA&context=spotify%3Aalbum%3A2FfQIQHKhBhPNL2m6QCFLf&nd=1&utm_medium=organic&product=open&%24full_url=https%3A%2F%2Fopen.spotify.com%2Ftrack%2F36VUprPnKa6JZU7IMLgu7s%3Fsi%3DrjFwWyvTQa-pvd4p8XZZOA%26context%3Dspotify%253Aalbum%253A2FfQIQHKhBhPNL2m6QCFLf&feature=organic&_branch_match_id=1386897964611902279&_branch_referrer=H4sIAAAAAAAAA82OYUvDMBCGf036zRbT2YlQZE6Cc1VXcG70y0jTpIlLk3BNNvfF32429D8IB3e8d897r%2FTejXdZNjrrlTil1LlUK7PP7h3YLjBfWsdNgvBEBK13AXQpzwjKZwiTWOd1%2BkczO0TJA2X72PPiY%2B1gZZa0eG7W08VL1YdpJMmoUP4In%2BS4OR3ea3rlDt3E3W6b5i2aFswaz798PPm1Rfgmn1HdhuEyYSLqRf20lA9y9VrhoajnpBKXiFTrNv7%2BxzEjaLrIXCeCUx%2BAlxZ6ahRLvoELDqBMv2vBHkcO5VyCHfgPeZgk%2F6MBAAA%3D" target="_blank">A Synthetic Dreamer</a></li>
+        <li><a href="https://open.spotify.com/intl-pt/track/66KIgyNQji1ZW0COKdmof6?si=-SdLjoh7TseN4K8YdT2dVg&context=spotify%3Aalbum%3A2FfQIQHKhBhPNL2m6QCFLf&nd=1&utm_medium=organic&product=open&%24full_url=https%3A%2F%2Fopen.spotify.com%2Ftrack%2F66KIgyNQji1ZW0COKdmof6%3Fsi%3D-SdLjoh7TseN4K8YdT2dVg%26context%3Dspotify%253Aalbum%253A2FfQIQHKhBhPNL2m6QCFLf&feature=organic&_branch_match_id=1386897964611902279&_branch_referrer=H4sIAAAAAAAAA82Ob0vDMBDGP036ztals4pQxqwUR0u1OBT3ZqT502RLk3BN0L3xs5sN%2FQ7CwXPc3e%2B5R3rv5vssm531SpxS4lyqlTlmKweWBepL67hJEF6KoPU%2BgC7lGUH5GuE61nmd%2FtHUTnHkgdBj1KJoNuOp6w9qsXu%2Frp4bNllRoLyeFcofr15Ze7DydjvzbtncfbAtZm8jwgW1xvMvH09%2BbRG%2ByddED2G6dLgW%2FaZ%2FauSDfOlaPBV9VbfiEpFoPcTf%2FzhmBA2LzCIRnPgAvLQwEqNo8g1ccABlxv0A9nPmUFYS7MR%2FAHyZnxSjAQAA" target="_blank">Cyber City Night</a></li>
+        <li><a href="https://open.spotify.com/intl-pt/track/5a0OBaEgtnoKJkz0vR5hQu?si=xwBwP6cBSEqQoGS53ftcCA&nd=1&utm_medium=organic&product=open&%24full_url=https%3A%2F%2Fopen.spotify.com%2Ftrack%2F5a0OBaEgtnoKJkz0vR5hQu%3Fsi%3DxwBwP6cBSEqQoGS53ftcCA&feature=organic&_branch_match_id=1386897964611902279&_branch_referrer=H4sIAAAAAAAAA7WNTQrCMBSET5Mu29paF0IRq62gC%2F8OIDEmbWiaF18Tqy48u1HwCMLAwHzMTGOt6adR1BuwUjxCakyopG6jmUG4OGZzMFwHJBkLp9TJocqbT4Wkc5JUXh8c%2FtoMOh9ZpKz1ntF4W9Cytho26%2FYZ3w5Zs3ckrXpJ0uV9KIbdhBXH8rqH1TFLhWWL%2BfeJKnX2E%2F9%2FI8lEXzwdBYJT65DngDXVkgUv5IIjSl2fzghDzzFfNAgdfwNA8X9vMQEAAA%3D%3D" target="_blank">Midnight Drive</a></li>
+        <li><a href="https://open.spotify.com/intl-pt/track/7JZXivBNKJvDAUKbNZaERM?si=GE0P2QMQQdmJIA_QIDC1WQ&nd=1&utm_medium=organic&product=open&%24full_url=https%3A%2F%2Fopen.spotify.com%2Ftrack%2F7JZXivBNKJvDAUKbNZaERM%3Fsi%3DGE0P2QMQQdmJIA_QIDC1WQ&feature=organic&_branch_match_id=1386897964611902279&_branch_referrer=H4sIAAAAAAAAA7WNUQuCMBzEP8181NIoCEZYZmQkLYjCF5k6dTS38XcavfTZW0EfITg4uB931xqj%2B6Xn9VoZXj9dqrUruLx7Kw2qGkqDlWbSQf6sHoTIBxC4%2FVRQECI%2Ftvpg99cuVWcjA7S8W18k2Y2P6%2FSQjFF4ORRpRrfnIwrinqMg2m0nJ58cCam6ZB%2FmZB9tplfyfaJCFHbi%2F2%2FIn8vK0qlTM2oGYFhBQyUvnRewmgFw2eQFqEfPAG9aUB17A79UxYkxAQAA" target="_blank">Stolen Memories</a></li>
+        <li><a href="https://open.spotify.com/intl-pt/track/4Jwc8UumNDU49tTltKW2QB?si=AmSX7VlJQreJHseiKk1arA&context=spotify%3Aalbum%3A2FfQIQHKhBhPNL2m6QCFLf&nd=1&utm_medium=organic&product=open&%24full_url=https%3A%2F%2Fopen.spotify.com%2Ftrack%2F4Jwc8UumNDU49tTltKW2QB%3Fsi%3DAmSX7VlJQreJHseiKk1arA%26context%3Dspotify%253Aalbum%253A2FfQIQHKhBhPNL2m6QCFLf&feature=organic&_branch_match_id=1386897964611902279&_branch_referrer=H4sIAAAAAAAAA82O3WrDMAyFn8a5TKiTtdsgjLQltEkpM1u33RXHtWsT%2F6HYdLvZs88t2zsMBBJH%2Bo6ODMFPj0UxeReU%2BMqp97lWdiyePLhTZKF2ntsM4UpErY8RdC2vCCobhNtU13X%2BRzNnkhSAsjH1qruw%2B0M0%2B%2FWhegivOvTvmCxR2U4KlevGvHws3nRHgHebiat%2BnFFIpnPmbOCfIZ382iJ8VzZUD9HcJtwKsiWbXi7l836HzZys2p24RaRaD%2Bn3P46ZQHtKzCwTnIYIvHZwplax7Bu44ADKno8DuMvEoV5JcIb%2FAAc6JN%2BjAQAA" target="_blank">Neon City</a></li>
+        <li><a href="https://open.spotify.com/intl-pt/track/3qqrAreiMishsJHTubuUKg?si=Nxp_Am8XQ42MdyIgZD6dTQ&nd=1&utm_medium=organic&product=open&%24full_url=https%3A%2F%2Fopen.spotify.com%2Ftrack%2F3qqrAreiMishsJHTubuUKg%3Fsi%3DNxp_Am8XQ42MdyIgZD6dTQ&feature=organic&_branch_match_id=1386897964611902279&_branch_referrer=H4sIAAAAAAAAA7WN3QqCMBzFn2ZeKqlIBBKSSB8YCAbRjUydOpzb%2FG%2BjvOnZm0GPEBw4cH6ccwatpdp5npJC025xsZQuo3z09hJEaxodC0m4g%2FywM4xVBlg8rBUUJMjPrFbs%2FtqNmGykATej9WCeIQFCc6oGdT6Wpja3S4%2BCTFEUpNeXrJJpey9CP2%2BXU%2F9Io7Ysvk%2BYsdpO%2FP8N%2BRFvLd04HcHaAIkF9JjTxnkD6QgA5X1Vg3gqAvFhADGRD0YW8t8xAQAA" target="_blank">Temporal Abyss</a></li>
+        <li><a href="https://open.spotify.com/intl-pt/track/4JvzleeRerzDiBUpb24OMB?si=eKBtQEVGQH-bs07YTQ57ng&context=spotify%3Aalbum%3A2FfQIQHKhBhPNL2m6QCFLf&nd=1&utm_medium=organic&product=open&%24full_url=https%3A%2F%2Fopen.spotify.com%2Ftrack%2F4JvzleeRerzDiBUpb24OMB%3Fsi%3DeKBtQEVGQH-bs07YTQ57ng%26context%3Dspotify%253Aalbum%253A2FfQIQHKhBhPNL2m6QCFLf&feature=organic&_branch_match_id=1386897964611902279&_branch_referrer=H4sIAAAAAAAAA82O3U7DMAyFnya9o4W02ySkCq0bZbABC9qQuJrSzGmjpUnkpPzsgmcnm%2BAdkCwdy%2FZ3fLoQnL%2FOMu9sUPIr5c6lWplDduPQ7gcRSuvAJIQWctB6N6AuuxNC8imhdazTOv2jhe3jKCAXh6jFw%2FtRA7wAHueq2rqGFs%2BPFclrr0g%2Bh2UV2O3rHVtcNP5y8rZho4lpCR0LawJ8hnjya0voKJ9y3Qz9uaO1ZPdsseyqbv20ov2YzeqVPEfkWjfx9z%2BOGUGzj8xVIoGHAaG02HKjRPKNIAFRmXbXoP3wgOWsQ9vDD%2B7EH3%2BjAQAA" target="_blank">Echoes of Chaos</a></li>
+        <li><a href="https://open.spotify.com/intl-pt/track/1MlPUdFuHcaAaJwYm2YC96?si=0QUX6XyEToCJOmLFjk__IA&context=spotify%3Aalbum%3A2FfQIQHKhBhPNL2m6QCFLf&nd=1&utm_medium=organic&product=open&%24full_url=https%3A%2F%2Fopen.spotify.com%2Ftrack%2F1MlPUdFuHcaAaJwYm2YC96%3Fsi%3D0QUX6XyEToCJOmLFjk__IA%26context%3Dspotify%253Aalbum%253A2FfQIQHKhBhPNL2m6QCFLf&feature=organic&_branch_match_id=1386897964611902279&_branch_referrer=H4sIAAAAAAAAA82Ob0vDMBDGP036snWpFhSK1GrYZtUVNthelTRN1tj845ow98bPbjb0OwgHdzx3v%2Bee0Xs3P2TZ7KyX4pxS51IlzZQ9OrBDYL60jpsE4VsRlOoCqHK8ICivECaxLuv0j2ZWR8kDZVPsize12Q0kLBmt6Pp00PhQ3xcoJ7NE%2BfNNu9sX%2B%2FPL1tbrD92Qz6nrVtG0YNZ4%2FuXjya8twnd5RVUf9HXCRLSrdvk6Po2b9wbroq1JI64RqVJ9%2FP2PY0bQDJFZJIJTH4CXFo7USJZ8AxccQJpj14M9zRzKegSr%2BQ%2BEGd4NowEAAA%3D%3D" target="_blank">Cybernetic City</a></li>
+        <li><a href="https://open.spotify.com/intl-pt/track/5NaiFFbFrLy2rvtq6NrXw5?si=P-HWHuJPRHuQglq7om6GCA&context=spotify%3Aalbum%3A2FfQIQHKhBhPNL2m6QCFLf&nd=1&utm_medium=organic&product=open&%24full_url=https%3A%2F%2Fopen.spotify.com%2Ftrack%2F5NaiFFbFrLy2rvtq6NrXw5%3Fsi%3DP-HWHuJPRHuQglq7om6GCA%26context%3Dspotify%253Aalbum%253A2FfQIQHKhBhPNL2m6QCFLf&feature=organic&_branch_match_id=1386897964611902279&_branch_referrer=H4sIAAAAAAAAA82O3UrEMBCFnya9s8XUVhCKrJVYtZTWG71b0mzShM3fThPXvfHZzS76DsLADGfmO3NkCH69K4rVu6DEKafe51rZfXHvwe0iC43z3GYI34io9TaCbuQZQeUGYZLqvM7%2FaOZMkgJQtk%2B9GqgiZCbQnzB8hkM9wMexQiVZFSofx6vuvYsv41sXp0Ufbp2pn9pkWjNnA%2F8K6eTXFuGq3FA9R3OZMBHT89S9ygc5Dj029dSSXlwiUq3n9Psfx0yg3SXmOhOchgi8cbBQq1j2DVxwAGWX7QzuuHJoWgnO8B915GuCowEAAA%3D%3D" target="_blank">Cybernetic Space</a></li>
+        <li><a href="https://open.spotify.com/intl-pt/track/013wyo1FVaTdvsj09W0v4R?si=F9YmDJOdQvmpeUwZUOjxaw&context=spotify%3Aalbum%3A2FfQIQHKhBhPNL2m6QCFLf&nd=1&utm_medium=organic&product=open&%24full_url=https%3A%2F%2Fopen.spotify.com%2Ftrack%2F013wyo1FVaTdvsj09W0v4R%3Fsi%3DF9YmDJOdQvmpeUwZUOjxaw%26context%3Dspotify%253Aalbum%253A2FfQIQHKhBhPNL2m6QCFLf&feature=organic&_branch_match_id=1386897964611902279&_branch_referrer=H4sIAAAAAAAAA82O2WrDMBBFv0Z%2B9CKngRRMSRNEl9DUpWlpX4JsS5ESbYwlO3npt1cJ6T8UBu4wM%2BfOFd67%2FjbLeme95KeUOpcqaQ7ZnQPbhdZX1jGTIDzhQaltAFWJM4LKOcIk1nmd%2FtGt1XHkgbaHqHlRjidbkA%2F63g39Pp995sPkDZWkl6hcktmXXj6tu3rQjm3G7816f6QjwtPWGs%2BOPp5cbRG%2BKedUNUFfOkx4%2FVg%2FPIt78fqywnpaL8iKXyJSpZr4%2Bx%2FHjKDpIlMknFEfgFUWdtTINvkBxhmANLttA3bsGVQLAVazX8r6XUmjAQAA" target="_blank">A Prisioner of Circuits</a></li>
+        <li><a href="https://open.spotify.com/intl-pt/track/1GkFDFZoa97wfcMzRVfRfH?si=Zxln0AQKRHitRpxIVjwFxw&context=spotify%3Aalbum%3A2FfQIQHKhBhPNL2m6QCFLf&nd=1&utm_medium=organic&product=open&%24full_url=https%3A%2F%2Fopen.spotify.com%2Ftrack%2F1GkFDFZoa97wfcMzRVfRfH%3Fsi%3DZxln0AQKRHitRpxIVjwFxw%26context%3Dspotify%253Aalbum%253A2FfQIQHKhBhPNL2m6QCFLf&feature=organic&_branch_match_id=1386897964611902279&_branch_referrer=H4sIAAAAAAAAA82OQW7CMBBFT%2BMsk%2BK0VEWKqhTkBkFRkwULNsgxNnbj2NbEVkIXPTsGtXeoNNIfzcz786X3blhk2eCsV%2BKSUudSrUyXvTqwp8B8YR03CcKPImh9DKALeUNQXiJMYt3W6R%2FNbB9HHijros7eO7IiB0tfnkfBPr6bvWhEhXIyKJSvDpM2D2W9aSrlGzet918jmUaE58wazycfT35tEX7KS6rb0N87TES9rquNfJOfuy3u5%2FWSbMU9ItW6jb%2F%2FccwImlNkZong1AfghYUzNYolP8AFB1DmfGzBjgOHYinB9vwK58UxFKMBAAA%3D" target="_blank">Fractured Mind</a></li>
+      </ul>
+    </div>
+    <div class="album">
+      <h3 onclick="toggleSongs('songs-album2')">2. Holographic Horizons</h3>
+      <ul id="songs-album2" style="display: none;">
+        <li><a href="https://open.spotify.com/intl-pt/track/7qQS6sZjtHgTlC3M7Llhy4?si=-K7sT4rERM6e70ArhwkKLw&context=spotify%3Aalbum%3A0hZAPabHVWyYxuY5G9W815&nd=1&utm_medium=organic&product=open&%24full_url=https%3A%2F%2Fopen.spotify.com%2Ftrack%2F7qQS6sZjtHgTlC3M7Llhy4%3Fsi%3D-K7sT4rERM6e70ArhwkKLw%26context%3Dspotify%253Aalbum%253A0hZAPabHVWyYxuY5G9W815&feature=organic&_branch_match_id=1386897964611902279&_branch_referrer=H4sIAAAAAAAAA82O3W7CMAyFnya9WwtNf7ZJFarYGBIg7QcNwQ1KS9pkTZPMSVR6s2dfQNs7IFk6lu3v%2BDBrtXmMIqOV5c0YEq1DwWUXzTSok6ttoTSVAYqTxglxdCAKdkEQLlG88HVZh%2F90rXo%2FskDqzmv%2B%2FfaRmcOXXbZbMcebfC3YmCC8MBzhp7tVbrYJPL9vMppPSmBDt1oPKM5qJS09W3%2FyZ4viFJdEVK6%2FdhN2KF9Jtfzcjfuz26cvD7v7aXqNSISo%2FO8bjulBefLMNGgosQ5ooaAlktfBD9CGAnDZHitQg6FQzBmonv4CihOVIqMBAAA%3D" target="_blank">Interwoven Circuits</a></li>
+        <li><a href="https://open.spotify.com/intl-pt/track/2vx5pi1UrW9Mjbt2kZIY8C?si=ObQ72jqkQ2mt2ZRd_hGelQ&context=spotify%3Aalbum%3A0hZAPabHVWyYxuY5G9W815&nd=1&utm_medium=organic&product=open&%24full_url=https%3A%2F%2Fopen.spotify.com%2Ftrack%2F2vx5pi1UrW9Mjbt2kZIY8C%3Fsi%3DObQ72jqkQ2mt2ZRd_hGelQ%26context%3Dspotify%253Aalbum%253A0hZAPabHVWyYxuY5G9W815&feature=organic&_branch_match_id=1386897964611902279&_branch_referrer=H4sIAAAAAAAAA82O0U6EMBBFv6Y8ghTRXRNiyJpdfTCKiRJ4IW0p2y6lrUOr7Ivfbnez%2FoPJJHcyM%2BfOFc7Z%2BS5JZmucHI4xsTZWUo%2FJvQXTe%2BYKY7mOEL4evFKdB1WIE4KyEuFtqNM6%2FqOZmcLIAWFjUPy15Fam71Cvnw%2FU4bF9alYblG1nibKHF1rd4sPnWOHJ4fat78SOqwrhG2a044sLJxdbhPOsJIr66dxdibZ8JfTxoz42i2%2Fy3bpepfk5IlGKht%2F%2FOGYAdR%2BYNBo4cR54YWBPtGTRD%2FCBA0i97yiY75lDsRFgJv4LuALd%2FqMBAAA%3D" target="_blank">Digital Girl</a></li>
+        <li><a href="https://open.spotify.com/intl-pt/track/6r6kXrvX4yaOdcx50vatjE?si=2OxWVDTxR36JncbdZgGU-w&context=spotify%3Aalbum%3A0hZAPabHVWyYxuY5G9W815&nd=1&utm_medium=organic&product=open&%24full_url=https%3A%2F%2Fopen.spotify.com%2Ftrack%2F6r6kXrvX4yaOdcx50vatjE%3Fsi%3D2OxWVDTxR36JncbdZgGU-w%26context%3Dspotify%253Aalbum%253A0hZAPabHVWyYxuY5G9W815&feature=organic&_branch_match_id=1386897964611902279&_branch_referrer=H4sIAAAAAAAAA82OQU7DMBBFT%2BPsSFq7iQApQhGlRWyKEDRtN5XjOImJY1sTu3U2nB23KndAGumPZub9%2BZ21ZnxMktFoK5oppsbEUqg%2BeTKga8dsrg1XEcKLxkl5dCDz7oIgUiC8CnVZx38000MYWaCsD5pB1u%2FgtFtMdFMzn85O1H6%2FILIaBSJLvPHldvnpP0j2plhVH9r1190Z4YxpZbm34eRmi3BKCiorN1y7WXco3mn1ui2nvXf7dP1Q3s%2FTa0QqZRV%2B%2F%2BOYAVR1YOZRw6l1wHMNLVWCRT%2FAGw4gVHusQJ9HDvlzB3rgvyHHvE%2BjAQAA" target="_blank">Aria</a></li>
+        <li><a href="https://open.spotify.com/intl-pt/track/5IeLb7iWjZ014O9RmCLOmJ?si=E3hoWfl1Ssu0yDZzfiWO1g&nd=1&utm_medium=organic&product=open&%24full_url=https%3A%2F%2Fopen.spotify.com%2Ftrack%2F5IeLb7iWjZ014O9RmCLOmJ%3Fsi%3DE3hoWfl1Ssu0yDZzfiWO1g&feature=organic&_branch_match_id=1386897964611902279&_branch_referrer=H4sIAAAAAAAAA7WNSwrCMBiET5MuW9v4QKGIVAVFKOii4EbSNGmjaRL%2BJEhdeHZTwSMIAwPzMTOdc8auksQa7QQfYmJMLIV6JGsDuvHU5dowFaFsyr2UNw8y78YKwhuU7YNGHP%2FaVPchckDoI%2FjswE71QlT36ySdlstzX5zK%2Fojw3gqEtzvc6YrL9GL9ZNheX1xUZdp%2Bn4iUdZj4%2FxvK5qoJNI04I84DyzW0RAkavYFxBiBUe6tBPy2DvOhA9%2BwDnLw8hDEBAAA%3D" target="_blank">Holographic Lives</a></li>
+        <li><a href="https://open.spotify.com/intl-pt/track/34T4zgaIe5U3KVylTBvxqG?si=9yAdPdQ3QS6wEmcmVi3dXg&context=spotify%3Aalbum%3A0hZAPabHVWyYxuY5G9W815&nd=1&utm_medium=organic&product=open&%24full_url=https%3A%2F%2Fopen.spotify.com%2Ftrack%2F34T4zgaIe5U3KVylTBvxqG%3Fsi%3D9yAdPdQ3QS6wEmcmVi3dXg%26context%3Dspotify%253Aalbum%253A0hZAPabHVWyYxuY5G9W815&feature=organic&_branch_match_id=1386897964611902279&_branch_referrer=H4sIAAAAAAAAA82OTU7DMBCFT%2BMsExonFUWKUAq0IDatKCntpnJsJ7HqPyY2TVhw9roV3AFppDeame%2FN65yz%2FV2S9NY40YwxsTaWQh%2BTewuGeeoKY7mOUJo1XsqDB1l0FwThEqWLUJd1%2FEdTo8LIAaHHoDjbZN8teeH5O36tRrmZfw2fS4QXvUD4cTaWbMXWeP02PT0pqiqB2UeL0ik12vHBhZNfW5TmuCSy9ura3XT7ckXq52o77ga%2Fy5ez7e0kv0YkUtbh9z%2BOGUDNAjOJGk6cB14YaIkWNPoB3nAAodtDDebUcygeOjCKnwGsBsAbowEAAA%3D%3D" target="_blank">Synthesized Daydream</a></li>
+        <li><a href="https://open.spotify.com/intl-pt/track/37i7u250bDaqzulWwFdNjS?si=A4bU22NWQy6waKzR-whqjw&context=spotify%3Aalbum%3A0hZAPabHVWyYxuY5G9W815&nd=1&utm_medium=organic&product=open&%24full_url=https%3A%2F%2Fopen.spotify.com%2Ftrack%2F37i7u250bDaqzulWwFdNjS%3Fsi%3DA4bU22NWQy6waKzR-whqjw%26context%3Dspotify%253Aalbum%253A0hZAPabHVWyYxuY5G9W815&feature=organic&_branch_match_id=1386897964611902279&_branch_referrer=H4sIAAAAAAAAA82O3WrDMAyFn8a5W9LaTbsNwggr2WBQ9sMauptiO07t1rFdxSZNL%2Fbsc8v2DgPBEZK%2BoyO9d%2F19lvXOetWOKXUu1cocsgcHtgncF9YJkyA8a4PW2wC6kBcEkRLhKtZlnf7R3HZx5IHyQ1SyUIuA8wlb0uM56HqomtX%2BA5GqV4gsyxn7xHhVv43zgb6c328GedwPCM%2B5NV6cfDz5tUU4JyXVLHTXbiK%2FylfKntf1uDmFTf50V99O82tEqjWLv%2F9xzAiaJjLTpBXUBxCFhR01iiffIFoBoMxuy8AOvYDiUYLtxA9KqeDiowEAAA%3D%3D" target="_blank">Cyber God</a></li>
+      </ul>
+    </div>
+    <div class="album">
+      <h3 onclick="toggleSongs('songs-album3')">3. Fragments of the Future</h3>
+      <ul id="songs-album3" style="display: none;">
+        <li><a href="https://open.spotify.com/intl-pt/track/1fk8E9jcUrkURhnh2uqaUy?si=qDiHo1y2T8a0pogTBD4wdw&context=spotify%3Aalbum%3A28d2PBaKDr01LtGlfzHE5h&nd=1&utm_medium=organic&product=open&%24full_url=https%3A%2F%2Fopen.spotify.com%2Ftrack%2F1fk8E9jcUrkURhnh2uqaUy%3Fsi%3DqDiHo1y2T8a0pogTBD4wdw%26context%3Dspotify%253Aalbum%253A28d2PBaKDr01LtGlfzHE5h&feature=organic&_branch_match_id=1386897964611902279&_branch_referrer=H4sIAAAAAAAAA82O0U7DMAxFvyZ9bNd0QwWpQhvdmAQPCK3PU5omTWgaZ26iUh74drIJ%2FgHJ0rVsn%2BurvHfTQ5ZNDryWS8qcS422Q%2FboELrAfQVO2ITQtQzGnAOaSl0RUmwJPcS6rtM%2FmsMYRx4ZH6Lmcij39x%2B8waF5V1bRcGHNQorDpElRX2p9hHyhp5KtHPSnXb2eu5nQOw7Wi08fT35tCd0UW2baMN46Wnb0bcdealzlr%2F7ZyK%2FjfqNuEZkxbfz9j2NG0HaRyRMpmA8oKsCeWc2TbxRSIGrbn1uEeRJYPSmEUfwAGgJqtqMBAAA%3D" target="_blank">Rust and Ruins</a></li>
+        <li><a href="https://open.spotify.com/intl-pt/track/6y5SNMPovZpF9vafNcroq8?si=PowN5eoeQwW7wXZqXAGzvw&context=spotify%3Aalbum%3A28d2PBaKDr01LtGlfzHE5h&nd=1&utm_medium=organic&product=open&%24full_url=https%3A%2F%2Fopen.spotify.com%2Ftrack%2F6y5SNMPovZpF9vafNcroq8%3Fsi%3DPowN5eoeQwW7wXZqXAGzvw%26context%3Dspotify%253Aalbum%253A28d2PBaKDr01LtGlfzHE5h&feature=organic&_branch_match_id=1386897964611902279&_branch_referrer=H4sIAAAAAAAAA82O0U7DMAxFvyZ9bFlKx0CqUGF0SEBVxAPTXqY0TdZoaZy5Scv2wLeTTfAPSJauZftc3845O9wlyWDBKXmMmbWxVmaf3FuE1nOXgxUmIvRaeq23HnXenRGSFoSWoc7r%2BI%2Fm0IeRQ8b3QefH7KN6q2Hc2PJ2ZLLiCIcFSctBkXRZw1RlAsT79HkzrTeHdbE6jROhcw7GiS8XTn5tCc3SgunG95eOLlpaP7CXJV7NXt1Ky9PzU9ZdIjKtm%2FD7H8cMoGkDM4ukYM6jyAF3zCgefaOQAlGZ3bZBmAaB%2BWOH0IsfIf811qMBAAA%3D" target="_blank">Wasteland Protocol</a></li>
+        <li><a href="https://open.spotify.com/intl-pt/track/4MsmIaRgPIJp7zAOtSVGsv?si=5UG3rHbWTHKUVRfUWU-e9Q&context=spotify%3Aalbum%3A28d2PBaKDr01LtGlfzHE5h&nd=1&utm_medium=organic&product=open&%24full_url=https%3A%2F%2Fopen.spotify.com%2Ftrack%2F4MsmIaRgPIJp7zAOtSVGsv%3Fsi%3D5UG3rHbWTHKUVRfUWU-e9Q%26context%3Dspotify%253Aalbum%253A28d2PBaKDr01LtGlfzHE5h&feature=organic&_branch_match_id=1386897964611902279&_branch_referrer=H4sIAAAAAAAAA82O3W7CMAyFnya9WzsSuj%2BpmroxWsYmGKxwidI0aSPSJHLS%2FXCxZ19A2zsgWTqW7e%2F4dN5bd5ckzhovxXdMrY2V1Pvk3oJpBuYzY7mOEB6LQandACrrjggiOcLTUMd1%2FE8z04eRB8r2Qcevrp%2FRVbucPdvrQ77w603hPhCZOonIJK0KAmW9fS%2Fn1WYlqm11wW%2FfEL5iRnv%2B5cPJny3CKcmpqof%2B1OGbBi8f6HwCl6MXXyhxKJ%2FS7hSRKlWH32ccM4C6CcwoEpz6AXhmoKVasugHuOAAUre7Gsyn45A9dmB6%2FgsQbnExowEAAA%3D%3D" target="_blank">Mechanical Twilight</a></li>
+        <li><a href="https://open.spotify.com/intl-pt/track/3LqFOfz6AXGwg8ZXwcoIzH?si=7dOipeeGQFGCoGy94kEOew&context=spotify%3Aalbum%3A28d2PBaKDr01LtGlfzHE5h&nd=1&utm_medium=organic&product=open&%24full_url=https%3A%2F%2Fopen.spotify.com%2Ftrack%2F3LqFOfz6AXGwg8ZXwcoIzH%3Fsi%3D7dOipeeGQFGCoGy94kEOew%26context%3Dspotify%253Aalbum%253A28d2PBaKDr01LtGlfzHE5h&feature=organic&_branch_match_id=1386897964611902279&_branch_referrer=H4sIAAAAAAAAA82O0U7DMAxFvyZ9bFmyjYFUobKtHWJS4W3iZUpTp42aJsFNVdYHvp1sgn9AsnQt2%2Bf6tt674TFJBme9kpeYOxdrZbrkyaGtR%2BFT68BEhC7lqPV5RJ22V4SwjNA81HUd%2F9HC9mHkkYsuKDt%2B5qWc19mpmJrNx2kS9mU%2BEJYPirDdfV0qB1C858XWFpeHZbcvYSJ0Lazx8OXDya8toSuWcV2N%2Fa2jm5q%2BPfPXHd4tjr7Qcj7sV%2B0tIte6Cr%2F%2FccwAmjowi0gC9yNCarHhRonoG0ECojLNuUI7DYDptkXbww%2FTCvP3owEAAA%3D%3D" target="_blank">Frayed Connections</a></li>
+        <li><a href="https://open.spotify.com/intl-pt/track/2YITpWvlrELGgMUnULEjpx?si=kvvlv9HURJyewDa7W-NTXA&context=spotify%3Aalbum%3A28d2PBaKDr01LtGlfzHE5h&nd=1&utm_medium=organic&product=open&%24full_url=https%3A%2F%2Fopen.spotify.com%2Ftrack%2F2YITpWvlrELGgMUnULEjpx%3Fsi%3Dkvvlv9HURJyewDa7W-NTXA%26context%3Dspotify%253Aalbum%253A28d2PBaKDr01LtGlfzHE5h&feature=organic&_branch_match_id=1386897964611902279&_branch_referrer=H4sIAAAAAAAAA82O3U7DMAyFnya9o2Up40%2Bq0KDdBpQJoVWDqylNkzbUTSI37TYueHayCd4ByZKtY3%2FHp3HO9rdR1FvjlDyEzNoQlG6jO4umGrhLjBU6IPRCDgDbASFpjgiJZ4TOfR3X4R%2FNTeclh4y3vtOPx7XdjIBZvqhfCl3k2afdk3jeKxKn7TjCeLMs3p4OYpeyq83Zav3uTS%2B50U7snT%2F5tSV0Gs8YlEN3muh1RV%2Fv2XOK55PcLUB%2BLbNpc4rIAEr%2F%2Bx%2FH9KCuPDMJpGBuQJEYrJlWPPhGIQWi0vW2RLPrBSYPDZpO%2FABc9lAgowEAAA%3D%3D" target="_blank">The End of Machines</a></li>
+        <li><a href="https://open.spotify.com/intl-pt/track/6ZJo6aRc5rsaS5xthOqMNl?si=rnRVA9MKS2eTuWtIlbb-JQ&context=spotify%3Aalbum%3A28d2PBaKDr01LtGlfzHE5h&nd=1&utm_medium=organic&product=open&%24full_url=https%3A%2F%2Fopen.spotify.com%2Ftrack%2F6ZJo6aRc5rsaS5xthOqMNl%3Fsi%3DrnRVA9MKS2eTuWtIlbb-JQ%26context%3Dspotify%253Aalbum%253A28d2PBaKDr01LtGlfzHE5h&feature=organic&_branch_match_id=1386897964611902279&_branch_referrer=H4sIAAAAAAAAA82O0U7DMAxFvyZ9o2UprQCpQoUxYGMMNgQSL1OSJku1NAmOIwYPfDvZBP%2BAZOlats%2F11Yg%2BnBdF8A579Zkz73PT221x4cF1UWDjvLQZoScqGrOOYBq9R0jZEjpJtV%2Fnf7RwQxohMLFNWr9NXc2WooLAVtUO9eJ9%2FmBIOQk9Kcdgly%2Ft2Xy2ovI5vuKd4fxo%2BkRoLZxFucN08mtLaFW2zPA4HDp62tHHSzYbw%2FHoHm%2BM%2Brq9rvQhIjOGp9%2F%2FOGYCbZeYUaYkwwiycbBhthfZN0glAXq7WXNwH0FCc6XBDfIHFNM1bKMBAAA%3D" target="_blank">Forgotten Future</a></li>
+</ul> <!-- Fecha o bloco de músicas -->
+    </div> <!-- Fecha o bloco de conteúdo da discografia -->
+  </div>
+  <script>
+    // Função para alternar exibição das músicas
+    function toggleSongs(id) {
+      const songs = document.getElementById(id);
+      if (songs.style.display === "none" || songs.style.display === "") {
+        songs.style.display = "block";
+      } else {
+        songs.style.display = "none";
+      }
+    }
+
+    // Código para alternar entre home e discography
+    const homeLink = document.getElementById('home-link');
+    const discographyLink = document.getElementById('discography-link');
+    const homeContent = document.getElementById('home-content');
+    const discographyContent = document.getElementById('discography-content');
+
+    homeLink.addEventListener('click', () => {
+      homeContent.style.display = 'block';
+      discographyContent.style.display = 'none';
+    });
+
+    discographyLink.addEventListener('click', () => {
+      homeContent.style.display = 'none';
+      discographyContent.style.display = 'block';
+    });
+  </script>
+</body>
+</html>
